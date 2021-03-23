@@ -12,9 +12,14 @@ const log = console.log;
  }
 
 // looping thru an object
-for (let x in person){
-   log(person[x])
-}
+// for (let x in person){
+//    log(person[x])
+// }
+let newPerson = person;
+
+newPerson.married = 'yes';
+log(person);
+log(newPerson)
 
 //  log(person.address.city)
 //  person.hobby = 'dancing';
