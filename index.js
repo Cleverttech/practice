@@ -11,12 +11,17 @@ const log = console.log;
      }
  }
 
+// looping thru an object
+for (let x in person){
+   log(person[x])
+}
 
- log(person.address.city)
- person.hobby = 'dancing';
- person.favoriteFood = 'jollof';
- delete person.age;
- log( Object.keys(person) )
+//  log(person.address.city)
+//  person.hobby = 'dancing';
+//  person.favoriteFood = 'jollof';
+//  delete person.age;
+//  log( Object.keys(person) )
+
 
 //  log( person )
 //  log( person.firstName )
