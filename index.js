@@ -1,5 +1,28 @@
 const log = console.log;
 
+//---objects-- 23.3
+ let person = {
+     firstName : 'Clever',
+     age: 29,
+     address : {
+         hse_no :17,
+         streetName: 'Am Heidgeshof',
+         city:'hennef'
+     }
+ }
+
+
+ log(person.address.city)
+ person.hobby = 'dancing';
+ person.favoriteFood = 'jollof';
+ delete person.age;
+ log( Object.keys(person) )
+
+//  log( person )
+//  log( person.firstName )
+//  log( person["firstName"]) // put string around the keys when using the bracket notation
+
+ //--22.3
 // let firstName= "clever";
 // let lastName= "tedeku";
 // let age = 29;
@@ -48,7 +71,7 @@ for (let i  = 0 ; i < str.length ; i++) {
       myStr += ' ';
   }
 }
-console.log(myStr)
+// console.log(myStr)
 
 
 
@@ -60,25 +83,27 @@ console.log(myStr)
 // }
  
 // /****Iteration 3.3****/
+let chars1= ' ';
+let chars2= ' ';
+let hacker1 = "Matthew"
+let hacker2 = "Mano"
 
 // for ( let i = 0; i < hacker1.length; i++ ) {
-//      let chars1 =  hacker1[i]
+//    chars1 +=  hacker1[i]
 
 //     for ( let j = 0; j < hacker2.length ; j++ ) {
-//        let chars2 = hacker2[j]
+//       chars2 += hacker2[j]
 
 //            if ( chars1 > chars2 ) {
-//              console.log('The driver\'s name goes first')
-//               continue;
+
+//              console.log('The driver\'s name goes first')   
              
 //            }else if (chars1 < chars2) {
 
-//         continue;
 //               console.log('Yo, the navigator goes first definitely.')
 
 //             } else if ( chars1 === chars2 ) {
 
-//               break;
 //                console.log('What?! You both have the same name?')
 //             } 
 //          }
