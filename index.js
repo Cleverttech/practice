@@ -15,11 +15,24 @@ const log = console.log;
 // for (let x in person){
 //    log(person[x])
 // }
-let newPerson = person;
 
-newPerson.married = 'yes';
-log(person);
-log(newPerson)
+// //Obj referencing
+// let newPerson = person;
+
+// newPerson.married = 'yes';
+// log(person);
+// log(newPerson)
+
+//ARRAYS
+
+let animals = ['lion', 'giraffe', 'cheetah', 'elefant']
+log( animals[2] )
+
+// animals.push('Tiger')
+// animals.splice(1, 0, "cat")
+animals.splice(1, 2)
+// animals.unshift(person)
+log(animals)
 
 //  log(person.address.city)
 //  person.hobby = 'dancing';
