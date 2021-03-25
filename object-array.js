@@ -27,7 +27,6 @@ log(ironhacker)
 // 5: list all keys of the ironhacker object
 log(Object.keys(ironhacker));
 
-
 // 6: check if ironhacker has property 'works at'
 log(['works at'] in ironhacker); 
 
