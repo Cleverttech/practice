@@ -1,52 +1,52 @@
 const log = console.log;
 
-const numbers = [1, 60, 112, 123, 100, 99, 73, 35];
+// const numbers = [1, 60, 112, 123, 100, 99, 73, 35];
 
-const oddNumbers = (arr) => {
-   let newArr = arr.filter((el)=>{
-     return el % 2 != 0 && el < 100;
-   })
-   return newArr
-}
+// const oddNumbers = (arr) => {
+//    let newArr = arr.filter((el)=>{
+//      return el % 2 != 0 && el < 100;
+//    })
+//    return newArr
+// }
 
-let myOddNumbers = oddNumbers(numbers)
-console.log(myOddNumbers) // [1,99,73,35]
+// let myOddNumbers = oddNumbers(numbers)
+// console.log(myOddNumbers) // [1,99,73,35]
 
 
-//exercise 2
-const people = [
-  { name: "Candice", age: 25 },
-  { name: "Tammy", age: 30 },
-  { name: "Allen", age: 49 },
-  { name: "Nettie", age: 21 },
-  { name: "Stuart", age: 17 },
-  { name: "Bill", age: 19 }
-];
+// //exercise 2
+// const people = [
+//   { name: "Candice", age: 25 },
+//   { name: "Tammy", age: 30 },
+//   { name: "Allen", age: 49 },
+//   { name: "Nettie", age: 21 },
+//   { name: "Stuart", age: 17 },
+//   { name: "Bill", age: 19 }
+// ];
 
-const adults = (arr) => {
-   let newArr = arr.filter((el)=>{
-       return el.age > 21
-   })
-   return newArr
-}
+// const adults = (arr) => {
+//    let newArr = arr.filter((el)=>{
+//        return el.age > 21
+//    })
+//    return newArr
+// }
 
-let canConsume = adults(people)
-console.log(canConsume) 
+// let canConsume = adults(people)
+// console.log(canConsume) 
 
-//exercise 3
-// using same people array
-const adults2 = (arr) => {
-  let newArr = arr.filter((el)=>{
-    return el.age > 21
-    })
-    let justTwo= newArr.map((el)=>{
-      return (el.name)
-    })
-  return justTwo.splice(0, 2);
-}
+// //exercise 3
+// // using same people array
+// const adults2 = (arr) => {
+//   let newArr = arr.filter((el)=>{
+//     return el.age > 21
+//     })
+//     let justTwo= newArr.map((el)=>{
+//       return (el.name)
+//     })
+//   return justTwo.slice(0, 2);
+// }
 
-let canConsumeTwo = adults2(people)
-console.log(canConsumeTwo) 
+// let canConsumeTwo = adults2(people)
+// console.log(canConsumeTwo) 
 //Answer should be ['Candice', 'Tammy']
 
 // const fruits = ['pineapple', 'orange', 'mango'];
