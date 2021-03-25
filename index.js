@@ -1,53 +1,94 @@
 const log = console.log;
 
+const numbers = [1, 60, 112, 123, 100, 99, 73, 35];
+
+const oddNumbers = (arr) => {
+   let newArr = arr.filter((el)=>{
+     return el % 2 != 0 && el < 100;
+   })
+   return newArr
+}
+
+let myOddNumbers = oddNumbers(numbers)
+console.log(myOddNumbers) // [1,99,73,35]
 
 
+//exercise 2
+const people = [
+  { name: "Candice", age: 25 },
+  { name: "Tammy", age: 30 },
+  { name: "Allen", age: 49 },
+  { name: "Nettie", age: 21 },
+  { name: "Stuart", age: 17 },
+  { name: "Bill", age: 19 }
+];
 
-const fruits = ['pineapple', 'orange', 'mango'];
+const adults = (arr) => {
+   let newArr = arr.filter((el)=>{
+       return el.age > 21
+   })
+   return newArr
+}
 
-let uppercaseFruits = fruits.map((el) => {
-  return el.toUpperCase()
-})
-console.log(uppercaseFruits)  //Answer should be  ['PINEALLPLE', 'ORANGE', 'MANGO'];
+let canConsume = adults(people)
+console.log(canConsume) 
 
-const cities = ['miami', 'barcelona', 'madrid', 'amsterdam', 'berlin', 'sao paulo', 'lisbon', 'mexico city']
-let firstLetterUpper = cities.map((el) =>{
- return el[0].toUpperCase()+el.slice(1);
-//  return el[0].toUpperCase()+el.substr(1);
+//exercise 3
+// using same people array
+const adults2 = (arr) => {
+  let newArr = arr.filter((el)=>{
+    return el.age > 21
+    })
+    let justTwo= newArr.map((el)=>{
+      return (el.name)
+    })
+  return justTwo.splice(0, 2);
+}
+
+let canConsumeTwo = adults2(people)
+console.log(canConsumeTwo) 
+//Answer should be ['Candice', 'Tammy']
+
+// const fruits = ['pineapple', 'orange', 'mango'];
+
+// let uppercaseFruits = fruits.map((el) => {
+//   return el.toUpperCase()
+// })
+// console.log(uppercaseFruits)  //Answer should be  ['PINEALLPLE', 'ORANGE', 'MANGO'];
+
+
+// const cities = ['miami', 'barcelona', 'madrid', 'amsterdam', 'berlin', 'sao paulo', 'lisbon', 'mexico city']
+// let firstLetterUpper = cities.map((el) =>{
+//  return el[0].toUpperCase()+el.slice(1);
+// //  return el[0].toUpperCase()+el.substr(1);
  
-})
-console.log(firstLetterUpper)
+// })
+// console.log(firstLetterUpper)
 
-const Info = {
-  cities : [
-    {name: 'Mirazur', owner : 'Gustavo'},
-    {name: 'Noma', owner : 'Jorge'},
-    {name: 'Gaggan', owner : 'Alvaro'},
-    {name: 'Geranium', owner : 'Gustavo'},
-    {name: 'Arpège', owner : 'Luis'},    
- ]  
-}
-
-
-const myRestaurants = (arr) => {
-  let newArr = Info.cities;
-  let mapped = newArr.map((city)=>{
-    return city.name
-  })
-  return mapped;
-}
-
-// const myRestaurants = (arr) => {
-//    let newArr = Info.cities;
-//    newArr.forEach((city)=>{
-//      log(city.name)
-//    })
+// const Info = {
+//   cities : [
+//     {name: 'Mirazur', owner : 'Gustavo'},
+//     {name: 'Noma', owner : 'Jorge'},
+//     {name: 'Gaggan', owner : 'Alvaro'},
+//     {name: 'Geranium', owner : 'Gustavo'},
+//     {name: 'Arpège', owner : 'Luis'},    
+//  ]  
 // }
 
+// let newArr = Info.cities;
+// const myRestaurants = (arr) => {
 
-//
-let restaurants = myRestaurants( /* pass your array here*/)
-console.log(restaurants)/*Answer should be [ 'Mirazur', 'Noma', 'Gaggan', 'Geranium', 'Arpège']*/
+//   let mapped = newArr.map((city)=>{
+//     return city.name
+//   })
+
+//   return mapped;
+// }
+
+// let restaurants = myRestaurants(newArr)
+// console.log(restaurants)/*Answer should be [ 'Mirazur', 'Noma', 'Gaggan', 'Geranium', 'Arpège']*/
+
+
 // let students = [
 //   {name: 'Rafa', color: 'Blue', candy: 12},
 //   {name: 'Elise', color: 'Pink', candy: 21},
