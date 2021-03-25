@@ -1,5 +1,131 @@
 const log = console.log;
 
+const data = [
+  {
+    country: 'USA',
+    pop: 340,
+  },
+  {
+    country: 'France',
+    pop: 133,
+  },
+  {
+    country: 'Bosnia',
+    pop: 5,
+  }
+]
+
+function totalpopulation(arr) {
+
+  if(arr. length ===0){
+      return 0  
+  }
+   // since we are calculating total, initial value of accumulator is set to 0
+   let total = arr.reduce((acc, elem) => {
+     return acc + elem.pop
+   }, 0)
+  return total;
+}
+
+//Invoking and running the function
+// let total = totalpopulation(data)
+// console.log(total) //Answer should be 478
+
+// let output = totalpopulation([])
+// console.log(output) //Answer should be 0
+
+//exercise
+const menu = [
+  { name: 'Carrots', calories: "150.45" },
+  { name: 'Steak'},
+  { name: 'Broccoli', calories: "120.2342" },
+  { name: 'Chicken', calories: "250.6523" },
+  { name: 'Pizza', calories: "520.124" }
+];
+
+function calAvgCalories(arr) {
+  if(arr.length === 0){
+    return 0
+  }
+let total = arr.reduce((acc, el, index)=>{
+   if(el.calories){
+      return acc + Number(el.calories)
+     }else{
+       return acc
+     }
+    
+  },0)
+
+  let average = total/arr.length
+  return average.toFixed(2);
+}
+
+//Invoking and running the function
+let total = calAvgCalories(menu)
+console.log(total) //Answer should be 208.29 
+
+let output = calAvgCalories([])
+console.log(output) //Answer should be 0
+
+// // Please do not mutate the original array
+// const arrOfStrings = ['cat', 'wolf', 'yo', 'animal'];
+
+// let clonedArr = JSON.parse(JSON.stringify(arrOfStrings));
+
+// const longestStr = (arr) => {
+//   let sortedArr = arr.sort((a,b)=>{
+//    if(a.length < b.length){
+//       return -1;
+//    }else if(a.length > b.length){
+//       return 1;
+//    }else {
+//       return 0;
+//    }
+//   })
+//   return sortedArr;
+
+// }
+
+// let longestStrings = longestStr(clonedArr)
+// console.log(longestStrings) //ANSWER should be ['yo', 'cat', 'wolf', 'animal']
+
+// // exercise 2
+
+// const people = [
+//   { name: 'Candice', age: 25 },
+//   { name: 'Tammy', age: 30 },
+//   { name: 'Allen', age: 19 },
+//   { name: 'Nettie', age: 21 },
+//   { name: 'Stuart', age: 30 },
+//   { name: 'Bill', age: 19 }
+// ];
+
+// const clonedPeople = JSON.parse(JSON.stringify(people))
+
+// const sortByAge = (arr) => {
+//    let newArr = arr.sort((a,b)=>{
+//      if(a.age < b.age){
+//        return -1;
+//      }else if(a.age > b.age){
+//        return 1;
+//      }else {
+//           if(a.name < b.name){
+//               return 1;
+//           }else if(a.name > b.name){
+//               return -1;
+//           }else{
+//             return 0;
+//        }
+//      }
+//    })
+
+//    return newArr;
+// }
+
+// let output = sortByAge(clonedPeople)
+// console.log(output)
+
+
 // const numbers = [1, 60, 112, 123, 100, 99, 73, 35];
 
 // const oddNumbers = (arr) => {
